@@ -10,8 +10,16 @@ import javax.persistence.EntityManager;
  * Hello world!
  */
 
-public class App {
-    public static void main(String[] args) {
+public final class App {
+
+    private App() {
+    }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(final String[] args) {
 
         Address ad = new Address(null, "Parafyanovo", "Maxsim Gorky", "19");
         Address ad1 = new Address(null, "Dokshitsy", "Maxsim Gorky", "35");
