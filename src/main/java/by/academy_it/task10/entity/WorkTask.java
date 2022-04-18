@@ -8,13 +8,11 @@ import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 
-@SuperBuilder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table
-@PrimaryKeyJoinColumn(name = "Task_ID")
 public class WorkTask extends Task {
     @Column
     private String coast;
