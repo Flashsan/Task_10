@@ -1,4 +1,4 @@
-package by.academy_it.task10;
+package by.academy_it.task9;
 
 import static org.junit.Assert.assertTrue;
 
