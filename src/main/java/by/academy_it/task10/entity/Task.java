@@ -3,19 +3,18 @@ package by.academy_it.task10.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
+@SuperBuilder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Table
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "TASK_TYPE",
-discriminatorType = DiscriminatorType.CHAR)
-@DiscriminatorValue("T")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Task implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

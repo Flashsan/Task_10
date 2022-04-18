@@ -4,16 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 
-
+@SuperBuilder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table
-@DiscriminatorValue("H")
+@PrimaryKeyJoinColumn(name = "Task_ID")
 public class HomeTask extends Task {
     @Column
     private String startDate;
